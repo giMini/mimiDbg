@@ -1,0 +1,590 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly DbgEngWrapper, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.Diagnostics.Runtime, Version=0.8.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class DbgEngWrapper.WDebugEngInterface<IDebugClient6>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    GetRaw(): PrivateScope, Public, HideBySig
+    op_Explicit(WDebugEngInterface<IDebugClient6>): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(WDebugEngInterface<IDebugClient6>): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(WDebugEngInterface<IDebugClient6>): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(WDebugEngInterface<IDebugClient6>): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(WDebugEngInterface<IDebugClient6>): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(WDebugEngInterface<IDebugClient6>): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(WDebugEngInterface<IDebugClient6>): PrivateScope, Public, Static, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class DbgEngWrapper.TlPayload_Int: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 HResult 'get set' : 
+  Methods:
+    get_HResult(): PrivateScope, Public, HideBySig, SpecialName
+    set_HResult(Int32): PrivateScope, Public, HideBySig, SpecialName
+Class DbgEngWrapper.WDebugClient: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DbgEngWrapper.WDebugEngInterface<IDebugClient6>
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(IDebugClient6*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Diagnostics.Tracing.EventSource g_log : Public, Static
+  Methods:
+    DebugCreate(WDebugClient&(Out)): PrivateScope, Public, Static, HideBySig
+    DebugConnect(String, WDebugClient&(Out)): PrivateScope, Public, Static, HideBySig
+    DisconnectProcessServer(UInt64): PrivateScope, Public, HideBySig
+    GetRunningProcessSystemIds(UInt64, UInt32[]&(Out)): PrivateScope, Public, HideBySig
+    AttachProcess(UInt64, UInt32 IsLong, DEBUG_ATTACH): PrivateScope, Public, HideBySig
+    GetProcessOptions(DEBUG_PROCESS&(Out)): PrivateScope, Public, HideBySig
+    AddProcessOptions(DEBUG_PROCESS): PrivateScope, Public, HideBySig
+    RemoveProcessOptions(DEBUG_PROCESS): PrivateScope, Public, HideBySig
+    SetProcessOptions(DEBUG_PROCESS): PrivateScope, Public, HideBySig
+    ConnectSession(DEBUG_CONNECT_SESSION, UInt32 IsLong): PrivateScope, Public, HideBySig
+    TerminateProcesses(): PrivateScope, Public, HideBySig
+    DetachProcesses(): PrivateScope, Public, HideBySig
+    EndSession(DEBUG_END): PrivateScope, Public, HideBySig
+    GetExitCode(UInt32&(Out)): PrivateScope, Public, HideBySig
+    DispatchCallbacks(UInt32 IsLong): PrivateScope, Public, HideBySig
+    ExitDispatch(WDebugClient): PrivateScope, Public, HideBySig
+    CreateClient(WDebugClient&(Out)): PrivateScope, Public, HideBySig
+    GetInputCallbacks(IntPtr&(Out)): PrivateScope, Public, HideBySig
+    SetInputCallbacks(IDebugInputCallbacksImp): PrivateScope, Public, HideBySig
+    GetOutputMask(DEBUG_OUTPUT&(Out)): PrivateScope, Public, HideBySig
+    SetOutputMask(DEBUG_OUTPUT): PrivateScope, Public, HideBySig
+    GetOtherOutputMask(WDebugClient, DEBUG_OUTPUT&(Out)): PrivateScope, Public, HideBySig
+    SetOtherOutputMask(WDebugClient, DEBUG_OUTPUT): PrivateScope, Public, HideBySig
+    GetOutputWidth(UInt32&(Out)): PrivateScope, Public, HideBySig
+    SetOutputWidth(UInt32 IsLong): PrivateScope, Public, HideBySig
+    FlushCallbacks(): PrivateScope, Public, HideBySig
+    EndProcessServer(UInt64): PrivateScope, Public, HideBySig
+    WaitForProcessServerEnd(UInt32 IsLong): PrivateScope, Public, HideBySig
+    IsKernelDebuggerEnabled(): PrivateScope, Public, HideBySig
+    TerminateCurrentProcess(): PrivateScope, Public, HideBySig
+    DetachCurrentProcess(): PrivateScope, Public, HideBySig
+    AbandonCurrentProcess(): PrivateScope, Public, HideBySig
+    GetRunningProcessSystemIdByExecutableNameWide(UInt64, String, DEBUG_GET_PROC, UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetRunningProcessDescriptionWide(UInt64, UInt32 IsLong, DEBUG_PROC_DESC, String&(Out), String&(Out)): PrivateScope, Public, HideBySig
+    CreateProcessWide(UInt64, String, DEBUG_CREATE_PROCESS): PrivateScope, Public, HideBySig
+    CreateProcessAndAttachWide(UInt64, String, DEBUG_CREATE_PROCESS, UInt32 IsLong, DEBUG_ATTACH): PrivateScope, Public, HideBySig
+    OpenDumpFileWide(String, UInt64): PrivateScope, Public, HideBySig
+    WriteDumpFileWide(String, UInt64, DEBUG_DUMP, DEBUG_FORMAT, String): PrivateScope, Public, HideBySig
+    AddDumpInformationFileWide(String, UInt64, DEBUG_DUMP_FILE): PrivateScope, Public, HideBySig
+    GetNumberDumpFiles(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetDumpFileWide(UInt32 IsLong, String&(Out), UInt64&(Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    AttachKernelWide(DEBUG_ATTACH, String): PrivateScope, Public, HideBySig
+    GetKernelConnectionOptionsWide(String&(Out)): PrivateScope, Public, HideBySig
+    SetKernelConnectionOptionsWide(String): PrivateScope, Public, HideBySig
+    StartProcessServerWide(DEBUG_CLASS, String, IntPtr): PrivateScope, Public, HideBySig
+    ConnectProcessServerWide(String, UInt64&(Out)): PrivateScope, Public, HideBySig
+    StartServerWide(String): PrivateScope, Public, HideBySig
+    OutputServersWide(DEBUG_OUTCTL, String, DEBUG_SERVERS): PrivateScope, Public, HideBySig
+    GetOutputCallbacksWide(IntPtr&(Out)): PrivateScope, Public, HideBySig
+    SetOutputCallbacksWide(IDebugOutputCallbacksImp(In)): PrivateScope, Public, HideBySig
+    GetOutputLinePrefixWide(String&(Out)): PrivateScope, Public, HideBySig
+    SetOutputLinePrefixWide(String): PrivateScope, Public, HideBySig
+    GetIdentityWide(String&(Out)): PrivateScope, Public, HideBySig
+    OutputIdentityWide(DEBUG_OUTCTL, UInt32 IsLong, String): PrivateScope, Public, HideBySig
+    GetEventCallbacksWide(IntPtr&(Out)): PrivateScope, Public, HideBySig
+    SetEventCallbacksWide(IDebugEventCallbacksWideImp): PrivateScope, Public, HideBySig
+    CreateProcess2Wide(UInt64, String, DEBUG_CREATE_PROCESS_OPTIONS&, String, String): PrivateScope, Public, HideBySig
+    CreateProcessAndAttach2Wide(UInt64, String, DEBUG_CREATE_PROCESS_OPTIONS*, String, String, UInt32 IsLong, DEBUG_ATTACH): PrivateScope, Public, HideBySig
+    PushOutputLinePrefixWide(String, UInt64&(Out)): PrivateScope, Public, HideBySig
+    PopOutputLinePrefix(UInt64): PrivateScope, Public, HideBySig
+    GetNumberInputCallbacks(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetNumberOutputCallbacks(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetNumberEventCallbacks(DEBUG_EVENT, UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetQuitLockStringWide(String&(Out)): PrivateScope, Public, HideBySig
+    SetQuitLockStringWide(String): PrivateScope, Public, HideBySig
+    SetEventContextCallbacks(IDebugEventContextCallbacksImp): PrivateScope, Public, HideBySig
+Class DbgEngWrapper.WDebugEngInterface<IDebugBreakpoint3>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    GetRaw(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class DbgEngWrapper.WDebugBreakpoint: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DbgEngWrapper.WDebugEngInterface<IDebugBreakpoint3>
+  Methods:
+    GetId(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetType(UInt32&(Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetAdder(WDebugClient&(Out)): PrivateScope, Public, HideBySig
+    GetFlags(DEBUG_BREAKPOINT_FLAG&(Out)): PrivateScope, Public, HideBySig
+    AddFlags(DEBUG_BREAKPOINT_FLAG): PrivateScope, Public, HideBySig
+    RemoveFlags(DEBUG_BREAKPOINT_FLAG): PrivateScope, Public, HideBySig
+    SetFlags(DEBUG_BREAKPOINT_FLAG): PrivateScope, Public, HideBySig
+    GetOffset(UInt64&(Out)): PrivateScope, Public, HideBySig
+    SetOffset(UInt64): PrivateScope, Public, HideBySig
+    GetDataParameters(UInt32&(Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    SetDataParameters(UInt32 IsLong, UInt32 IsLong): PrivateScope, Public, HideBySig
+    GetPassCount(UInt32&(Out)): PrivateScope, Public, HideBySig
+    SetPassCount(UInt32 IsLong): PrivateScope, Public, HideBySig
+    GetCurrentPassCount(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetMatchThreadId(UInt32&(Out)): PrivateScope, Public, HideBySig
+    SetMatchThreadId(UInt32 IsLong): PrivateScope, Public, HideBySig
+    GetParameters(DEBUG_BREAKPOINT_PARAMETERS&(Out)): PrivateScope, Public, HideBySig
+    GetCommandWide(UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    GetCommandWide(String&(Out)): PrivateScope, Public, HideBySig
+    SetCommandWide(String): PrivateScope, Public, HideBySig
+    GetOffsetExpressionWide(UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    GetOffsetExpressionWide(String&(Out)): PrivateScope, Public, HideBySig
+    SetOffsetExpressionWide(String): PrivateScope, Public, HideBySig
+    GetGuid(Guid&(Out)): PrivateScope, Public, HideBySig
+    AbandonInterface(): PrivateScope, Public, HideBySig
+Class DbgEngWrapper.WDebugEngInterface<IDebugControl6>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class DbgEngWrapper.WDebugControl: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DbgEngWrapper.WDebugEngInterface<IDebugControl6>
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(IDebugControl6*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetInterrupt(): PrivateScope, Public, HideBySig
+    SetInterrupt(DEBUG_INTERRUPT(In)): PrivateScope, Public, HideBySig
+    GetInterruptTimeout(UInt32&(Out)): PrivateScope, Public, HideBySig
+    SetInterruptTimeout(UInt32(In) IsLong): PrivateScope, Public, HideBySig
+    GetDisassembleEffectiveOffset(UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetNearInstruction(UInt64(In), Int32(In), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetDebuggeeType(DEBUG_CLASS&(Out), DEBUG_CLASS_QUALIFIER&(Out)): PrivateScope, Public, HideBySig
+    GetActualProcessorType(IMAGE_FILE_MACHINE&(Out)): PrivateScope, Public, HideBySig
+    GetExecutingProcessorType(IMAGE_FILE_MACHINE&(Out)): PrivateScope, Public, HideBySig
+    GetNumberProcessors(UInt32&(Out)): PrivateScope, Public, HideBySig
+    IsPointer64Bit(): PrivateScope, Public, HideBySig
+    GetEffectiveProcessorType(IMAGE_FILE_MACHINE&(Out)): PrivateScope, Public, HideBySig
+    SetEffectiveProcessorType(IMAGE_FILE_MACHINE(In)): PrivateScope, Public, HideBySig
+    GetExecutionStatus(DEBUG_STATUS&(Out)): PrivateScope, Public, HideBySig
+    SetExecutionStatus(DEBUG_STATUS(In)): PrivateScope, Public, HideBySig
+    GetCodeLevel(DEBUG_LEVEL&(Out)): PrivateScope, Public, HideBySig
+    SetCodeLevel(DEBUG_LEVEL(In)): PrivateScope, Public, HideBySig
+    GetEngineOptions(DEBUG_ENGOPT&(Out)): PrivateScope, Public, HideBySig
+    AddEngineOptions(DEBUG_ENGOPT(In)): PrivateScope, Public, HideBySig
+    RemoveEngineOptions(DEBUG_ENGOPT(In)): PrivateScope, Public, HideBySig
+    SetEngineOptions(DEBUG_ENGOPT(In)): PrivateScope, Public, HideBySig
+    GetSystemErrorControl(ERROR_LEVEL&(Out), ERROR_LEVEL&(Out)): PrivateScope, Public, HideBySig
+    SetSystemErrorControl(ERROR_LEVEL(In), ERROR_LEVEL(In)): PrivateScope, Public, HideBySig
+    GetNumberBreakpoints(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetBreakpointParameters(UInt32(In) IsLong, UInt32(In) IsLong, DEBUG_BREAKPOINT_PARAMETERS[]&(Out)): PrivateScope, Public, HideBySig
+    GetBreakpointParameters(UInt32[](In), DEBUG_BREAKPOINT_PARAMETERS[]&(Out)): PrivateScope, Public, HideBySig
+    RemoveExtension(UInt64(In)): PrivateScope, Public, HideBySig
+    GetNumberEventFilters(UInt32&(Out), UInt32&(Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetSpecificFilterParameters(UInt32(In) IsLong, UInt32(In) IsLong, DEBUG_SPECIFIC_FILTER_PARAMETERS[]&(Out)): PrivateScope, Public, HideBySig
+    GetExceptionFilterParameters(UInt32(In) IsLong, UInt32(In) IsLong, DEBUG_EXCEPTION_FILTER_PARAMETERS[]&(Out)): PrivateScope, Public, HideBySig
+    GetExceptionFilterParameters(UInt32[](In), DEBUG_EXCEPTION_FILTER_PARAMETERS[]&(Out)): PrivateScope, Public, HideBySig
+    WaitForEvent(DEBUG_WAIT(In), UInt32(In) IsLong): PrivateScope, Public, HideBySig
+    GetDumpFormatFlags(DEBUG_FORMAT&(Out)): PrivateScope, Public, HideBySig
+    GetNumberTextReplacements(UInt32&(Out)): PrivateScope, Public, HideBySig
+    RemoveTextReplacements(): PrivateScope, Public, HideBySig
+    GetAssemblyOptions(DEBUG_ASMOPT&(Out)): PrivateScope, Public, HideBySig
+    AddAssemblyOptions(DEBUG_ASMOPT(In)): PrivateScope, Public, HideBySig
+    RemoveAssemblyOptions(DEBUG_ASMOPT(In)): PrivateScope, Public, HideBySig
+    SetAssemblyOptions(DEBUG_ASMOPT(In)): PrivateScope, Public, HideBySig
+    ControlledOutputWide(DEBUG_OUTCTL(In), DEBUG_OUTPUT(In), String(In)): PrivateScope, Public, HideBySig
+    DisassembleWide(UInt64(In), DEBUG_DISASM(In), String&(Out), UInt64&(Out)): PrivateScope, Public, HideBySig
+    ExecuteWide(DEBUG_OUTCTL(In), String(In), DEBUG_EXECUTE(In)): PrivateScope, Public, HideBySig
+    GetBreakpointByIndex2(UInt32(In) IsLong, WDebugBreakpoint&(Out)): PrivateScope, Public, HideBySig
+    GetBreakpointById2(UInt32(In) IsLong, WDebugBreakpoint&(Out)): PrivateScope, Public, HideBySig
+    AddBreakpoint2(DEBUG_BREAKPOINT_TYPE(In), UInt32(In) IsLong, WDebugBreakpoint&(Out)): PrivateScope, Public, HideBySig
+    RemoveBreakpoint2(WDebugBreakpoint(In)): PrivateScope, Public, HideBySig
+    AddExtensionWide(String(In), UInt32(In) IsLong, UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetExtensionByPathWide(String(In), UInt64&(Out)): PrivateScope, Public, HideBySig
+    CallExtensionWide(UInt64(In), String(In), String(In)): PrivateScope, Public, HideBySig
+    GetExtensionFunctionWide(UInt64(In), String(In), IntPtr&(Out)): PrivateScope, Public, HideBySig
+    GetEventFilterTextWide(UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    GetEventFilterCommandWide(UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    SetEventFilterCommandWide(UInt32(In) IsLong, String(In)): PrivateScope, Public, HideBySig
+    GetSpecificFilterArgumentWide(UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    SetSpecificFilterArgumentWide(UInt32(In) IsLong, String(In)): PrivateScope, Public, HideBySig
+    GetExceptionFilterSecondCommandWide(UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    GetLastEventInformationWide(DEBUG_EVENT&(Out), UInt32&(Out), UInt32&(Out), DEBUG_LAST_EVENT_INFO&(Out), String&(Out)): PrivateScope, Public, HideBySig
+    GetTextReplacementWide(String(In), String&(Out)): PrivateScope, Public, HideBySig
+    GetTextReplacementWide(UInt32(In) IsLong, String&(Out), String&(Out)): PrivateScope, Public, HideBySig
+    SetTextReplacementWide(String(In), String(In)): PrivateScope, Public, HideBySig
+    GetStackTraceEx(UInt64(In), UInt64(In), UInt64(In), Int32(In), DEBUG_STACK_FRAME_EX[]&(Out)): PrivateScope, Public, HideBySig
+    GetStackTraceEx(UInt64(In), UInt64(In), UInt64(In), DEBUG_STACK_FRAME_EX[]&(Out)): PrivateScope, Public, HideBySig
+    GetBreakpointByGuid(Guid(In), WDebugBreakpoint&(Out)): PrivateScope, Public, HideBySig
+    GetExecutionStatusEx(DEBUG_STATUS&(Out)): PrivateScope, Public, HideBySig
+    GetSynchronizationStatus(UInt32&(Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+Class DbgEngWrapper.WDebugEngInterface<IDebugSystemObjects4>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class DbgEngWrapper.WDebugSystemObjects: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DbgEngWrapper.WDebugEngInterface<IDebugSystemObjects4>
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(IDebugSystemObjects4*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetEventThread(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetEventProcess(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetCurrentThreadId(UInt32&(Out)): PrivateScope, Public, HideBySig
+    SetCurrentThreadId(UInt32(In) IsLong): PrivateScope, Public, HideBySig
+    GetCurrentProcessId(UInt32&(Out)): PrivateScope, Public, HideBySig
+    SetCurrentProcessId(UInt32(In) IsLong): PrivateScope, Public, HideBySig
+    GetNumberThreads(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetTotalNumberThreads(UInt32&(Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetThreadIdsByIndex(UInt32(In) IsLong, UInt32(In) IsLong, UInt32[]&(Out), UInt32[]&(Out)): PrivateScope, Public, HideBySig
+    GetCurrentThreadDataOffset(UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetCurrentThreadTeb(UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetThreadIdByTeb(UInt64(In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetCurrentThreadSystemId(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetThreadIdBySystemId(UInt32(In) IsLong, UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetNumberProcesses(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetProcessIdsByIndex(UInt32(In) IsLong, UInt32(In) IsLong, UInt32[]&(Out), UInt32[]&(Out)): PrivateScope, Public, HideBySig
+    GetCurrentProcessDataOffset(UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetCurrentProcessPeb(UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetCurrentProcessSystemId(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetProcessIdBySystemId(UInt32(In) IsLong, UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetCurrentProcessHandle(UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetCurrentProcessUpTime(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetImplicitThreadDataOffset(UInt64&(Out)): PrivateScope, Public, HideBySig
+    SetImplicitThreadDataOffset(UInt64(In)): PrivateScope, Public, HideBySig
+    GetImplicitProcessDataOffset(UInt64&(Out)): PrivateScope, Public, HideBySig
+    SetImplicitProcessDataOffset(UInt64(In)): PrivateScope, Public, HideBySig
+    GetEventSystem(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetCurrentSystemId(UInt32&(Out)): PrivateScope, Public, HideBySig
+    SetCurrentSystemId(UInt32(In) IsLong): PrivateScope, Public, HideBySig
+    GetNumberSystems(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetSystemIdsByIndex(UInt32(In) IsLong, UInt32(In) IsLong, UInt32[]&(Out)): PrivateScope, Public, HideBySig
+    GetCurrentProcessExecutableNameWide(String&(Out)): PrivateScope, Public, HideBySig
+Class DbgEngWrapper.WDebugEngInterface<IDebugSymbols5>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class DbgEngWrapper.WDebugSymbols: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DbgEngWrapper.WDebugEngInterface<IDebugSymbols5>
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(IDebugSymbols5*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetSymbolOptions(SYMOPT&(Out)): PrivateScope, Public, HideBySig
+    AddSymbolOptions(SYMOPT(In)): PrivateScope, Public, HideBySig
+    RemoveSymbolOptions(SYMOPT(In)): PrivateScope, Public, HideBySig
+    SetSymbolOptions(SYMOPT(In)): PrivateScope, Public, HideBySig
+    GetNumberModules(UInt32&(Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetModuleByIndex(UInt32(In) IsLong, UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetModuleByOffset(UInt64(In), UInt32(In) IsLong, UInt32&(Out), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetModuleParameters(UInt32(In) IsLong, UInt64[](In), UInt32(In) IsLong, DEBUG_MODULE_PARAMETERS[]&(Out)): PrivateScope, Public, HideBySig
+    GetTypeSize(UInt64(In), UInt32(In) IsLong, UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetOffsetTypeId(UInt64(In), UInt32&(Out), UInt64&(Out)): PrivateScope, Public, HideBySig
+    ResetScope(): PrivateScope, Public, HideBySig
+    EndSymbolMatch(UInt64(In)): PrivateScope, Public, HideBySig
+    GetTypeOptions(DEBUG_TYPEOPTS&(Out)): PrivateScope, Public, HideBySig
+    AddTypeOptions(DEBUG_TYPEOPTS(In)): PrivateScope, Public, HideBySig
+    RemoveTypeOptions(DEBUG_TYPEOPTS(In)): PrivateScope, Public, HideBySig
+    SetTypeOptions(DEBUG_TYPEOPTS(In)): PrivateScope, Public, HideBySig
+    GetNameByOffsetWide(UInt64(In), String&(Out), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetOffsetByNameWide(String(In), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetNearNameByOffsetWide(UInt64(In), Int32(In), String&(Out), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetLineByOffsetWide(UInt64(In), UInt32&(Out), String&(Out), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetOffsetByLineWide(UInt32(In) IsLong, String(In), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetModuleByModuleNameWide(String(In), UInt32(In) IsLong, UInt32&(Out), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetSymbolModuleWide(String(In), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetTypeNameWide(UInt64(In), UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    GetTypeIdWide(UInt64(In), String(In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetFieldOffsetWide(UInt64(In), UInt32(In) IsLong, String(In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetSymbolTypeIdWide(String(In), UInt32&(Out), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetScopeSymbolGroup2(DEBUG_SCOPE_GROUP(In), WDebugSymbolGroup(In), WDebugSymbolGroup&(Out)): PrivateScope, Public, HideBySig
+    CreateSymbolGroup2(WDebugSymbolGroup&(Out)): PrivateScope, Public, HideBySig
+    StartSymbolMatchWide(String(In), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetNextSymbolMatchWide(UInt64(In), String&(Out), UInt64&(Out)): PrivateScope, Public, HideBySig
+    ReloadWide(String(In)): PrivateScope, Public, HideBySig
+    GetSymbolPathWide(String&(Out)): PrivateScope, Public, HideBySig
+    SetSymbolPathWide(String(In)): PrivateScope, Public, HideBySig
+    AppendSymbolPathWide(String(In)): PrivateScope, Public, HideBySig
+    GetImagePathWide(String&(Out)): PrivateScope, Public, HideBySig
+    SetImagePathWide(String(In)): PrivateScope, Public, HideBySig
+    AppendImagePathWide(String(In)): PrivateScope, Public, HideBySig
+    GetSourcePathWide(String&(Out)): PrivateScope, Public, HideBySig
+    GetSourcePathElementWide(UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    SetSourcePathWide(String(In)): PrivateScope, Public, HideBySig
+    AppendSourcePathWide(String(In)): PrivateScope, Public, HideBySig
+    GetModuleVersionInformationWide_VS_FIXEDFILEINFO(UInt32(In) IsLong, VS_FIXEDFILEINFO&(Out)): PrivateScope, Public, HideBySig
+    GetModuleVersionInformationWide_VS_FIXEDFILEINFO(UInt64(In), VS_FIXEDFILEINFO&(Out)): PrivateScope, Public, HideBySig
+    GetModuleVersionInformationWide_Translations(UInt32(In) IsLong, UInt32[]&(Out)): PrivateScope, Public, HideBySig
+    GetModuleVersionInformationWide_Translations(UInt64(In), UInt32[]&(Out)): PrivateScope, Public, HideBySig
+    GetModuleVersionInformationWide_StringInfo(UInt32(In) IsLong, UInt32(In) IsLong, String(In), String&(Out)): PrivateScope, Public, HideBySig
+    GetModuleVersionInformationWide_StringInfo(UInt64(In), UInt32(In) IsLong, String(In), String&(Out)): PrivateScope, Public, HideBySig
+    GetModuleNameStringWide(DEBUG_MODNAME(In), UInt32(In) IsLong, UInt64(In), UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    GetModuleNameStringWide(DEBUG_MODNAME(In), UInt32(In) IsLong, UInt64(In), String&(Out)): PrivateScope, Public, HideBySig
+    GetConstantNameWide(UInt64(In), UInt32(In) IsLong, UInt64(In), String&(Out)): PrivateScope, Public, HideBySig
+    GetFieldNameWide(UInt64(In), UInt32(In) IsLong, UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    IsManagedModule(UInt32(In) IsLong, UInt64(In)): PrivateScope, Public, HideBySig
+    GetModuleByModuleName2Wide(String(In), UInt32(In) IsLong, DEBUG_GETMOD(In), UInt32&(Out), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetModuleByOffset2(UInt64(In), UInt32(In) IsLong, DEBUG_GETMOD(In), UInt32&(Out), UInt64&(Out)): PrivateScope, Public, HideBySig
+    AddSyntheticModuleWide(UInt64(In), UInt32(In) IsLong, String(In), String(In), DEBUG_ADDSYNTHMOD(In)): PrivateScope, Public, HideBySig
+    RemoveSyntheticModule(UInt64(In)): PrivateScope, Public, HideBySig
+    GetCurrentScopeFrameIndex(UInt32&(Out)): PrivateScope, Public, HideBySig
+    SetScopeFrameByIndex(UInt32(In) IsLong): PrivateScope, Public, HideBySig
+    SetScopeFromJitDebugInfo(UInt32(In) IsLong, UInt64(In)): PrivateScope, Public, HideBySig
+    SetScopeFromStoredEvent(): PrivateScope, Public, HideBySig
+    GetFieldTypeAndOffsetWide(UInt64(In), UInt32(In) IsLong, String(In), UInt32&(Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    AddSyntheticSymbolWide(UInt64(In), UInt32(In) IsLong, String(In), DEBUG_ADDSYNTHSYM(In), DEBUG_MODULE_AND_ID&(Out)): PrivateScope, Public, HideBySig
+    RemoveSyntheticSymbol(DEBUG_MODULE_AND_ID(In)): PrivateScope, Public, HideBySig
+    GetSymbolEntriesByOffset(UInt64(In), UInt32(In) IsLong, DEBUG_MODULE_AND_ID[]&(Out), UInt64[]&(Out), UInt32(In) IsLong): PrivateScope, Public, HideBySig
+    GetSymbolEntriesByNameWide(String(In), UInt32(In) IsLong, DEBUG_MODULE_AND_ID[]&(Out)): PrivateScope, Public, HideBySig
+    GetSymbolEntryByToken(UInt64(In), UInt32(In) IsLong, DEBUG_MODULE_AND_ID&(Out)): PrivateScope, Public, HideBySig
+    GetSymbolEntryInformation(DEBUG_MODULE_AND_ID*(In), DEBUG_SYMBOL_ENTRY&(Out)): PrivateScope, Public, HideBySig
+    GetScopeEx(UInt64&(Out), DEBUG_STACK_FRAME_EX&(Out), IntPtr(In), UInt32(In) IsLong): PrivateScope, Public, HideBySig
+    SetScopeEx(UInt64(In), DEBUG_STACK_FRAME_EX(In), IntPtr(In), UInt32(In) IsLong): PrivateScope, Public, HideBySig
+    GetNameByInlineContextWide(UInt64(In), UInt32(In) IsLong, String&(Out), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetCurrentScopeFrameIndexEx(DEBUG_FRAME(In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    SetScopeFrameByIndexEx(DEBUG_FRAME(In), UInt32(In) IsLong): PrivateScope, Public, HideBySig
+Class DbgEngWrapper.WDebugSymbolGroup: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(IDebugSymbolGroup2*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetRaw(): PrivateScope, Public, HideBySig
+    GetNumberSymbols(UInt32&(Out)): PrivateScope, Public, HideBySig
+    RemoveSymbolByIndex(UInt32(In) IsLong): PrivateScope, Public, HideBySig
+    GetSymbolParameters(UInt32(In) IsLong, UInt32(In) IsLong, DEBUG_SYMBOL_PARAMETERS[]&(Out)): PrivateScope, Public, HideBySig
+    ExpandSymbol(UInt32(In) IsLong, Boolean(In, HasFieldMarshal)): PrivateScope, Public, HideBySig
+    AddSymbolWide(String(In), UInt32&(In, Out)): PrivateScope, Public, HideBySig
+    RemoveSymbolByNameWide(String(In)): PrivateScope, Public, HideBySig
+    GetSymbolNameWide(UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    WriteSymbolWide(UInt32(In) IsLong, String(In)): PrivateScope, Public, HideBySig
+    OutputAsTypeWide(UInt32(In) IsLong, String(In)): PrivateScope, Public, HideBySig
+    GetSymbolTypeNameWide(UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    GetSymbolSize(UInt32(In) IsLong, UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetSymbolOffset(UInt32(In) IsLong, UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetSymbolRegister(UInt32(In) IsLong, UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetSymbolValueTextWide(UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    GetSymbolEntryInformation(UInt32(In) IsLong, DEBUG_SYMBOL_ENTRY&(Out)): PrivateScope, Public, HideBySig
+Class DbgEngWrapper.WDebugEngInterface<IDebugDataSpaces4>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class DbgEngWrapper.WDebugDataSpaces: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DbgEngWrapper.WDebugEngInterface<IDebugDataSpaces4>
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(IDebugDataSpaces4*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ReadVirtual(UInt64(In), UInt32(In) IsLong, Byte[]&(Out)): PrivateScope, Public, HideBySig
+    ReadVirtualDirect(UInt64(In), UInt32(In) IsLong, Byte*(In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    WriteVirtual(UInt64(In), Byte*(In), UInt32(In) IsLong, UInt32&(Out)): PrivateScope, Public, HideBySig
+    WriteVirtual(UInt64(In), Byte[](In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    SearchVirtual(UInt64(In), UInt64(In), Byte[](In), UInt32(In) IsLong, UInt64&(Out)): PrivateScope, Public, HideBySig
+    ReadVirtualUncached(UInt64(In), UInt32(In) IsLong, Byte[]&(Out)): PrivateScope, Public, HideBySig
+    WriteVirtualUncached(UInt64(In), Byte[](In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    ReadPointersVirtual(UInt32(In) IsLong, UInt64(In), UInt64[]&(Out)): PrivateScope, Public, HideBySig
+    WritePointersVirtual(UInt64(In), UInt64[](In)): PrivateScope, Public, HideBySig
+    ReadPhysical(UInt64(In), UInt32(In) IsLong, Byte[]&(Out)): PrivateScope, Public, HideBySig
+    WritePhysical(UInt64(In), Byte[](In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    ReadControl(UInt32(In) IsLong, UInt64(In), UInt32(In) IsLong, Byte[]&(Out)): PrivateScope, Public, HideBySig
+    WriteControl(UInt32(In) IsLong, UInt64(In), Byte[](In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    ReadIo(INTERFACE_TYPE(In), UInt32(In) IsLong, UInt32(In) IsLong, UInt64(In), UInt32(In) IsLong, Byte[]&(Out)): PrivateScope, Public, HideBySig
+    WriteIo(INTERFACE_TYPE(In), UInt32(In) IsLong, UInt32(In) IsLong, UInt64(In), Byte[](In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    ReadMsr(UInt32(In) IsLong, UInt64&(Out)): PrivateScope, Public, HideBySig
+    WriteMsr(UInt32(In) IsLong, UInt64(In)): PrivateScope, Public, HideBySig
+    ReadBusData(BUS_DATA_TYPE(In), UInt32(In) IsLong, UInt32(In) IsLong, UInt32(In) IsLong, UInt32(In) IsLong, Byte[]&(Out)): PrivateScope, Public, HideBySig
+    WriteBusData(BUS_DATA_TYPE(In), UInt32(In) IsLong, UInt32(In) IsLong, UInt32(In) IsLong, Byte[](In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    CheckLowMemory(): PrivateScope, Public, HideBySig
+    ReadDebuggerData(UInt32(In) IsLong, Byte[](In, Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    ReadProcessorSystemData(UInt32(In) IsLong, DEBUG_DATA(In), Byte[](In, Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    VirtualToPhysical(UInt64(In), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetVirtualTranslationPhysicalOffsets(UInt64(In), UInt64[](In, Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    ReadHandleData(UInt64(In), DEBUG_HANDLE_DATA_TYPE(In), Byte[]&(In, Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    FillVirtual(UInt64(In), UInt32(In) IsLong, Byte[](In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    FillPhysical(UInt64(In), UInt32(In) IsLong, Byte[](In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    QueryVirtual(UInt64(In), MEMORY_BASIC_INFORMATION64&(Out)): PrivateScope, Public, HideBySig
+    ReadImageNtHeaders(UInt64(In), IMAGE_NT_HEADERS64&(Out)): PrivateScope, Public, HideBySig
+    ReadTagged(Guid(In), UInt32(In) IsLong, Byte[]&(In, Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    StartEnumTagged(UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetNextTagged(UInt64(In), Guid&(Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    EndEnumTagged(UInt64(In)): PrivateScope, Public, HideBySig
+    GetOffsetInformation(DEBUG_DATA_SPACE(In), DEBUG_OFFSINFO(In), UInt64(In), Byte[](In, Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetNextDifferentlyValidOffsetVirtual(UInt64(In), UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetValidRegionVirtual(UInt64(In), UInt32(In) IsLong, UInt64&(Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    SearchVirtual2(UInt64(In), UInt64(In), DEBUG_VSEARCH(In), Byte[](In), UInt32(In) IsLong, UInt64&(Out)): PrivateScope, Public, HideBySig
+    ReadMultiByteStringVirtualWide(UInt64(In), UInt32(In) IsLong, CODE_PAGE(In), String&(Out)): PrivateScope, Public, HideBySig
+    ReadUnicodeStringVirtualWide(UInt64(In), UInt32(In) IsLong, String&(Out)): PrivateScope, Public, HideBySig
+    ReadPhysical2(UInt64(In), UInt32(In) IsLong, DEBUG_PHYSICAL(In), Byte[]&(Out)): PrivateScope, Public, HideBySig
+    WritePhysical2(UInt64(In), DEBUG_PHYSICAL(In), Byte[](In), UInt32&(Out)): PrivateScope, Public, HideBySig
+Class DbgEngWrapper.WDebugEngInterface<IDebugRegisters2>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class DbgEngWrapper.WDebugRegisters: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DbgEngWrapper.WDebugEngInterface<IDebugRegisters2>
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(IDebugRegisters2*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetNumberRegisters(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetValue(UInt32(In) IsLong, DEBUG_VALUE&(Out)): PrivateScope, Public, HideBySig
+    SetValue(UInt32(In) IsLong, DEBUG_VALUE(In)): PrivateScope, Public, HideBySig
+    GetInstructionOffset(UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetStackOffset(UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetFrameOffset(UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetDescriptionWide(UInt32(In) IsLong, String&(Out), DEBUG_REGISTER_DESCRIPTION&(Out)): PrivateScope, Public, HideBySig
+    GetIndexByNameWide(String(In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetNumberPseudoRegisters(UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetPseudoDescriptionWide(UInt32(In) IsLong, String&(Out), UInt64&(Out), UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetPseudoIndexByNameWide(String(In), UInt32&(Out)): PrivateScope, Public, HideBySig
+    GetPseudoValues(DEBUG_REGSRC(In), UInt32(In) IsLong, UInt32[](In), DEBUG_VALUE[]&(Out)): PrivateScope, Public, HideBySig
+    GetPseudoValues(DEBUG_REGSRC(In), UInt32(In) IsLong, UInt32(In) IsLong, DEBUG_VALUE[]&(Out)): PrivateScope, Public, HideBySig
+    GetValues2(DEBUG_REGSRC(In), UInt32(In) IsLong, UInt32(In) IsLong, DEBUG_VALUE[]&(Out)): PrivateScope, Public, HideBySig
+    GetValues2(DEBUG_REGSRC(In), UInt32[](In), DEBUG_VALUE[]&(Out)): PrivateScope, Public, HideBySig
+    SetValues2(UInt32(In) IsLong, UInt32[](In), DEBUG_VALUE[](In)): PrivateScope, Public, HideBySig
+    GetInstructionOffset2(UInt32(In) IsLong, UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetStackOffset2(UInt32(In) IsLong, UInt64&(Out)): PrivateScope, Public, HideBySig
+    GetFrameOffset2(UInt32(In) IsLong, UInt64&(Out)): PrivateScope, Public, HideBySig
+Class DbgEngWrapper.WDebugEngInterface<IDebugAdvanced3>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class DbgEngWrapper.WDebugAdvanced: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DbgEngWrapper.WDebugEngInterface<IDebugAdvanced3>
+    Void .ctor(IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(IDebugAdvanced3*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetThreadContext(Byte*(In), UInt32(In) IsLong): PrivateScope, Public, HideBySig
+    SetThreadContext(Byte*(In), UInt32(In) IsLong): PrivateScope, Public, HideBySig
+    Request(DEBUG_REQUEST(In), Byte*(In), UInt32(In) IsLong, Byte*(In), UInt32(In) IsLong, UInt32&(Out)): PrivateScope, Public, HideBySig
+Interface DbgEngWrapper.IDebugEventCallbacksWideImp: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Methods:
+    GetInterestMask(DEBUG_EVENT&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Breakpoint(WDebugBreakpoint(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Exception(EXCEPTION_RECORD64&(In), UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateThread(UInt64(In), UInt64(In), UInt64(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ExitThread(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateProcess(UInt64(In), UInt64(In), UInt64(In), UInt32(In), String(In), String(In), UInt32(In), UInt32(In), UInt64(In), UInt64(In), UInt64(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ExitProcess(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LoadModule(UInt64(In), UInt64(In), UInt32(In), String(In), String(In), UInt32(In), UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UnloadModule(String(In), UInt64(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SystemError(UInt32(In), UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SessionStatus(DEBUG_SESSION(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChangeDebuggeeState(DEBUG_CDS(In), UInt64(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChangeEngineState(DEBUG_CES(In), UInt64(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChangeSymbolState(DEBUG_CSS(In), UInt64(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface DbgEngWrapper.IDebugEventContextCallbacksImp: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Methods:
+    GetInterestMask(DEBUG_EVENT&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Breakpoint(WDebugBreakpoint(In), DEBUG_EVENT_CONTEXT*(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Exception(EXCEPTION_RECORD64&(In), UInt32(In), DEBUG_EVENT_CONTEXT*(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateThread(UInt64(In), UInt64(In), UInt64(In), DEBUG_EVENT_CONTEXT*(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ExitThread(UInt32(In), DEBUG_EVENT_CONTEXT*(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateProcess(UInt64(In), UInt64(In), UInt64(In), UInt32(In), String(In), String(In), UInt32(In), UInt32(In), UInt64(In), UInt64(In), UInt64(In), DEBUG_EVENT_CONTEXT*(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ExitProcess(UInt32(In), DEBUG_EVENT_CONTEXT*(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LoadModule(UInt64(In), UInt64(In), UInt32(In), String(In), String(In), UInt32(In), UInt32(In), DEBUG_EVENT_CONTEXT*(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UnloadModule(String(In), UInt64(In), DEBUG_EVENT_CONTEXT*(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SystemError(UInt32(In), UInt32(In), DEBUG_EVENT_CONTEXT*(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SessionStatus(DEBUG_SESSION(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChangeDebuggeeState(DEBUG_CDS(In), UInt64(In), DEBUG_EVENT_CONTEXT*(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChangeEngineState(DEBUG_CES(In), UInt64(In), DEBUG_EVENT_CONTEXT*(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChangeSymbolState(DEBUG_CSS(In), UInt64(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface DbgEngWrapper.IDebugInputCallbacksImp: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Methods:
+    StartInput(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndInput(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface DbgEngWrapper.IDebugOutputCallbacksImp: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Methods:
+    Output(DEBUG_OUTPUT(In), String(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface DbgEngWrapper.IComDbgEngEventCallbacks: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Methods:
+    GetInterestMask(UInt32*): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Breakpoint(IDebugBreakpoint2*): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Exception(_EXCEPTION_RECORD64*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateThread(UInt64, UInt64, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ExitThread(UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateProcess(UInt64, UInt64, UInt64, UInt32 IsLong, Char*, Char*, UInt32 IsLong, UInt32 IsLong, UInt64, UInt64, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ExitProcess(UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LoadModule(UInt64, UInt64, UInt32 IsLong, Char*, Char*, UInt32 IsLong, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UnloadModule(Char*, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SystemError(UInt32 IsLong, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SessionStatus(UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChangeDebuggeeState(UInt32 IsLong, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChangeEngineState(UInt32 IsLong, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChangeSymbolState(UInt32 IsLong, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface DbgEngWrapper.IComDbgEngEventContextCallbacks: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Methods:
+    GetInterestMask(UInt32*): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Breakpoint(IDebugBreakpoint2*, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Exception(_EXCEPTION_RECORD64*, UInt32 IsLong, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateThread(UInt64, UInt64, UInt64, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ExitThread(UInt32 IsLong, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateProcess(UInt64, UInt64, UInt64, UInt32 IsLong, Char*, Char*, UInt32 IsLong, UInt32 IsLong, UInt64, UInt64, UInt64, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ExitProcess(UInt32 IsLong, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LoadModule(UInt64, UInt64, UInt32 IsLong, Char*, Char*, UInt32 IsLong, UInt32 IsLong, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UnloadModule(Char*, UInt64, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SystemError(UInt32 IsLong, UInt32 IsLong, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SessionStatus(UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChangeDebuggeeState(UInt32 IsLong, UInt64, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChangeEngineState(UInt32 IsLong, UInt64, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ChangeSymbolState(UInt32 IsLong, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface DbgEngWrapper.IComDbgEngInputCallbacks: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Methods:
+    StartInput(UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EndInput(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface DbgEngWrapper.IComDbgEngOutputCallbacks: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Methods:
+    Output(UInt32 IsLong, Char*): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class DbgEngWrapper.DbgEngCallbacksAdapter<DbgEngWrapper::IDebugEventCallbacksWideImp\,\&IID_IDebugEventCallbacksWide>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class DbgEngWrapper.DbgEngEventCallbacksAdapter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DbgEngWrapper.DbgEngCallbacksAdapter<DbgEngWrapper::IDebugEventCallbacksWideImp\,\&IID_IDebugEventCallbacksWide>
+    Void .ctor(DbgEngWrapper.IDebugEventCallbacksWideImp): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    DbgEngWrapper.IComDbgEngEventCallbacks
+  Methods:
+    GetInterestMask(UInt32*): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Breakpoint(IDebugBreakpoint2*): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Exception(_EXCEPTION_RECORD64*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CreateThread(UInt64, UInt64, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ExitThread(UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CreateProcess(UInt64, UInt64, UInt64, UInt32 IsLong, Char*, Char*, UInt32 IsLong, UInt32 IsLong, UInt64, UInt64, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ExitProcess(UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    LoadModule(UInt64, UInt64, UInt32 IsLong, Char*, Char*, UInt32 IsLong, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    UnloadModule(Char*, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SystemError(UInt32 IsLong, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SessionStatus(UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ChangeDebuggeeState(UInt32 IsLong, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ChangeEngineState(UInt32 IsLong, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ChangeSymbolState(UInt32 IsLong, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class DbgEngWrapper.DbgEngCallbacksAdapter<DbgEngWrapper::IDebugEventContextCallbacksImp\,\&IID_IDebugEventContextCallbacks>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class DbgEngWrapper.DbgEngEventContextCallbacksAdapter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DbgEngWrapper.DbgEngCallbacksAdapter<DbgEngWrapper::IDebugEventContextCallbacksImp\,\&IID_IDebugEventContextCallbacks>
+    Void .ctor(DbgEngWrapper.IDebugEventContextCallbacksImp): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    DbgEngWrapper.IComDbgEngEventContextCallbacks
+  Methods:
+    GetInterestMask(UInt32*): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Breakpoint(IDebugBreakpoint2*, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Exception(_EXCEPTION_RECORD64*, UInt32 IsLong, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CreateThread(UInt64, UInt64, UInt64, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ExitThread(UInt32 IsLong, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CreateProcess(UInt64, UInt64, UInt64, UInt32 IsLong, Char*, Char*, UInt32 IsLong, UInt32 IsLong, UInt64, UInt64, UInt64, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ExitProcess(UInt32 IsLong, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    LoadModule(UInt64, UInt64, UInt32 IsLong, Char*, Char*, UInt32 IsLong, UInt32 IsLong, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    UnloadModule(Char*, UInt64, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SystemError(UInt32 IsLong, UInt32 IsLong, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SessionStatus(UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ChangeDebuggeeState(UInt32 IsLong, UInt64, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ChangeEngineState(UInt32 IsLong, UInt64, _DEBUG_EVENT_CONTEXT*, UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ChangeSymbolState(UInt32 IsLong, UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class DbgEngWrapper.DbgEngCallbacksAdapter<DbgEngWrapper::IDebugInputCallbacksImp\,\&IID_IDebugInputCallbacks>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class DbgEngWrapper.DbgEngInputCallbacksAdapter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DbgEngWrapper.DbgEngCallbacksAdapter<DbgEngWrapper::IDebugInputCallbacksImp\,\&IID_IDebugInputCallbacks>
+    Void .ctor(DbgEngWrapper.IDebugInputCallbacksImp): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    DbgEngWrapper.IComDbgEngInputCallbacks
+  Methods:
+    StartInput(UInt32 IsLong): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInput(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class DbgEngWrapper.DbgEngCallbacksAdapter<DbgEngWrapper::IDebugOutputCallbacksImp\,\&IID_IDebugOutputCallbacksWide>: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class DbgEngWrapper.DbgEngOutputCallbacksAdapter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :DbgEngWrapper.DbgEngCallbacksAdapter<DbgEngWrapper::IDebugOutputCallbacksImp\,\&IID_IDebugOutputCallbacksWide>
+    Void .ctor(DbgEngWrapper.IDebugOutputCallbacksImp): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    DbgEngWrapper.IComDbgEngOutputCallbacks
+  Methods:
+    Output(UInt32 IsLong, Char*): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
