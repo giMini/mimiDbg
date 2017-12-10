@@ -28,8 +28,8 @@ MimiDbg has been in my mind for a long time (since DbgShell announcement). The p
 
 Currently, I tested the oneliner against:
 
-Windows 2012R2 - 64-bit
-Windows 2016 - 64-bit
+* Windows 2012R2 - 64-bit
+* Windows 2016 - 64-bit
 
 ## Credential Guard
 
