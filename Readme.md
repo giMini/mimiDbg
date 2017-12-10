@@ -11,7 +11,7 @@ MimiDbg uses [PowerMemory](https://github.com/giMini/PowerMemory/blob/master/REA
 3) Open a command prompt. 
 4) Type:
 ```
-cd c:\temp\DbgShell
+cd c:\temp\DbgShell\x64
 ```
 
 5) Run the following oneliner:
