@@ -6,6 +6,8 @@ MimiDbg uses [PowerMemory](https://github.com/giMini/PowerMemory/blob/master/REA
 
 ## How to use it?
 
+![mimiDbg How to use it?](https://media.giphy.com/media/xUOxfdG7ghdVXHmRZ6/giphy.gif)
+
 1) Download the project. 
 2) Unzip it in c:\temp. 
 3) Open a command prompt. 
